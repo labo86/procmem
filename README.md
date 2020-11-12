@@ -33,9 +33,9 @@ En la sección __START__ se muestra la información de la ejecución.
 
 ### RUNNING
 En la sección __RUNNING__ se hace un muestreo periódico del uso de memoria. La frecuencia esta dada por la duración del intervalo.
-Los valores __VmSize__, __VmPeak__, __VmRSS__ y __VmHWN__ son extraidos de `/proc/$PID/stat` donde PID es el número de proceso. Para más información ver [man proc](https://man7.org/linux/man-pages/man5/proc.5.html)
+Los valores __VmSize__, __VmPeak__, __VmRSS__ y __VmHWN__ son extraidos de `/proc/$PID/stat` donde PID es el número de proceso. Para más información ver [man proc](https://man7.org/linux/man-pages/man5/proc.5.html).
 
 ### FINISHED
-Los valores corresponde al tiempo de usuario y el tiempo de sistema. El __UTime__ es extraido con la función [ProcessState.UserTime()](https://golang.org/pkg/os/#ProcessState.UserTime) y el __STime__ [ProcessState.SystemTime()](https://golang.org/pkg/os/#ProcessState.SystemTime)
+Los valores corresponde al tiempo de usuario y el tiempo de sistema. El __UTime__ es extraido con la función [ProcessState.UserTime()](https://golang.org/pkg/os/#ProcessState.UserTime) y el __STime__ con [ProcessState.SystemTime()](https://golang.org/pkg/os/#ProcessState.SystemTime).
 
 
