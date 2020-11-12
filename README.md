@@ -7,9 +7,9 @@ Bájelo con el siguiente comando
 
 ## Uso
 `./procmem output interval comando`
- - output: el nombre del archivo de salida
- - interval:  el intervalo de muestreo de memoria en segundos
- - comando: el comando a medir
+ - __output__: el nombre del archivo de salida
+ - __interval__:  el intervalo de muestreo de memoria en segundos
+ - __comando__: el comando a medir
  
 ## Ejemplo de salida
 ```
@@ -27,12 +27,15 @@ UTime : 1639.412000
 STime : 7.376000
 ```
 
-La salida tiene 3 secciones, START, RUNNING, FINISHED.
+La salida tiene 3 secciones, __START__, __RUNNING__, __FINISHED__.
 ### START
-En la sección START se muestra la información de la ejecución.
+En la sección __START__ se muestra la información de la ejecución.
 
 ### RUNNING
-En la sección RUNNING se hace un muestreo periódico del uso de memoria. La frecuencia esta dada por la duración del intervalo.
-Los valores VmSize VmPeak VmRSS y VmHWN son extraidos de /proc/$PID/stat donde PID es el número de proceso. Para más información ver [man proc](https://man7.org/linux/man-pages/man5/proc.5.html)
+En la sección __RUNNING__ se hace un muestreo periódico del uso de memoria. La frecuencia esta dada por la duración del intervalo.
+Los valores VmSize VmPeak VmRSS y VmHWN son extraidos de `/proc/$PID/stat` donde PID es el número de proceso. Para más información ver [man proc](https://man7.org/linux/man-pages/man5/proc.5.html)
+
+### FINISHED
+Los valores corresponde al tiempo de usuario y el tiempo de sistema. El __UTime_ es extraido con la función [ProcessState.UserTime()](https://golang.org/pkg/os/#ProcessState.UserTime) y el __STime__ [ProcessState.SystemTime()](https://golang.org/pkg/os/#ProcessState.SystemTime)
 
 
