@@ -3,8 +3,8 @@ Programa para medir el uso de memoria
 
 ## Instalar
 Bájelo con el siguiente comando
-```wget https://github.com/imo-chile/procmem/releases/download/v0.1/procmem_linux -O procmem```
-o usando el siguiente [link](https://github.com/imo-chile/procmem/releases/download/v0.1/procmem_linux).
+```wget https://github.com/labo86/procmem/releases/download/v0.1/procmem_linux -O procmem```
+o usando el siguiente [link](https://github.com/labo86/procmem/releases/download/v0.1/procmem_linux).
 
 ## Uso
 `./procmem output interval comando`
