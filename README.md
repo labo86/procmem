@@ -1,18 +1,35 @@
 # procmem
-Programa para medir el uso de memoria
+Programa para medir el uso de memoria.
+
+Este programa sirve para registrar el uso de memoria y el tiempo de usuario y sistema de la ejecución de un comando.
+Se debe correr el comando con este programa para que registre los datos. Este programa no sirve para recuperar los datos de una ejecución hecho anteriormente.
+
+El programa muestrea el uso de memoria en intervalos de tiempos definidos por el usuario.
 
 ## Instalar
 Bájelo con el siguiente comando
-```wget https://github.com/labo86/procmem/releases/download/v0.1/procmem_linux -O procmem```
+```
+wget https://github.com/labo86/procmem/releases/download/v0.1/procmem_linux -O procmem
+```
 o usando el siguiente [link](https://github.com/labo86/procmem/releases/download/v0.1/procmem_linux).
 
 ## Uso
-`./procmem output interval comando`
+```
+procmem output interval comando
+```
  - __output__: el nombre del archivo de salida
  - __interval__:  el intervalo de muestreo de memoria en segundos
  - __comando__: el comando a medir
  
-## Ejemplo de salida
+### Ejemplo
+Si quiero ejecutar el comando `blastn -db dbname -query query.fasta -out result.txt -max_target_seqs 1 -outfmt 6`  y registrar sus datos de uso de memoria y tiempo en el archivo `output.txt` y que muestree el uso de memoria cada 60 segundos entonces el comando que deben ejecutar es el siguiente:
+
+```
+procmem output.txt 60 blastn -db dbname -query query.fasta -out result.txt -max_target_seqs 1 -outfmt 6
+```
+
+ 
+## Salida
 ```
 ##START
 Command : diamond
