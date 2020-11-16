@@ -22,7 +22,7 @@ procmem output interval comando
  - __comando__: el comando a medir
  
 ### Ejemplo
-Si quiero ejecutar el comando `blastn -db dbname -query query.fasta -out result.txt -max_target_seqs 1 -outfmt 6`  y registrar sus datos de uso de memoria y tiempo en el archivo `output.txt` y que muestree el uso de memoria cada 60 segundos entonces el comando que deben ejecutar es el siguiente:
+Si quiero ejecutar el comando `blastn -db dbname -query query.fasta -out result.txt -max_target_seqs 1 -outfmt 6`  y registrar sus datos de uso de memoria y tiempo en el archivo `output.txt` y que muestree el uso de memoria cada 60 segundos, entonces el comando que deben ejecutar es el siguiente:
 
 ```
 procmem output.txt 60 blastn -db dbname -query query.fasta -out result.txt -max_target_seqs 1 -outfmt 6
